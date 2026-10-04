@@ -2,32 +2,20 @@
   border-bottom: 1px solid #e7e9fc;
 }
 
-/* ---------- MOBILE ---------- */
-
 .header .container {
   display: flex;
   align-items: center;
-
   width: 100%;
 }
-
-/*
-  На мобильном внутри header-wrapper:
-  LOGO ---------------- BURGER
-*/
 
 .header-wrapper {
   display: flex;
-  flex-direction: row;
   align-items: center;
 
   width: 100%;
-  min-width: 0;
 
   padding: 16px 0;
 }
-
-/* LOGO */
 
 .header-wrapper .logo {
   display: block;
@@ -41,13 +29,13 @@
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
-
   width: 24px;
   height: 24px;
 
+  margin-left: auto;
   padding: 0;
-  margin: 0 0 0 auto;
+
+  flex-shrink: 0;
 
   border: none;
   background-color: transparent;
@@ -67,7 +55,7 @@
   stroke: currentColor;
 }
 
-/*  NAVIGATION  */
+/* NAVIGATION */
 
 .nav {
   display: none;
@@ -82,8 +70,6 @@
 
 .nav-item {
   font-weight: 500;
-
-  color: #2e2f42;
 }
 
 .nav-link {
@@ -99,7 +85,7 @@
   color: #404bbf;
 }
 
-/* Активная страница */
+/* CURRENT PAGE */
 
 .current {
   position: relative;
@@ -123,7 +109,7 @@
   background-color: #404bbf;
 }
 
-/*  ADDRESS  */
+/* ADDRESS */
 
 .address {
   display: none;
@@ -147,15 +133,10 @@
 }
 
 /* 
-   TABLET
-   768px+ */
+   TABLET — 768px+
+    */
 
 @media screen and (min-width: 768px) {
-  .header .container {
-    display: flex;
-    align-items: center;
-  }
-
   .header-wrapper {
     width: auto;
 
@@ -164,7 +145,7 @@
     flex-shrink: 0;
   }
 
-  /* Скрываем burger */
+  /* Burger больше не нужен */
 
   .burger-menu {
     display: none;
@@ -178,18 +159,11 @@
     margin-left: 76px;
   }
 
-  .nav-list {
-    display: flex;
-    align-items: center;
-
-    gap: 40px;
-  }
-
   .nav-link {
     padding: 24px 0;
   }
 
-  /* Показываем address */
+  /* Показываем контакты */
 
   .address {
     display: block;
@@ -197,15 +171,7 @@
     margin-left: auto;
   }
 
-  /*
-    На планшете:
-
-    email
-    phone
-  */
-
   .address-list {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
 
@@ -222,20 +188,10 @@
 }
 
 /* 
-   DESKTOP
-   1158px+
+   DESKTOP — 1158px+
     */
 
 @media screen and (min-width: 1158px) {
-  .nav {
-    margin-left: 76px;
-  }
-
-  /*
-    На desktop контакты:
-    email    phone
-  */
-
   .address-list {
     flex-direction: row;
     align-items: center;
