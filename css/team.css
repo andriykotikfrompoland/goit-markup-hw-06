@@ -1,75 +1,170 @@
 .team {
   background-color: #f4f4fd;
 }
+
+/* TITLE */
+
 .team-subtitle {
   margin-bottom: 72px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
+  letter-spacing: 0.02em;
+
   text-align: center;
+
   color: #2e2f42;
 }
+
+/* LIST */
+
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 72px;
 }
+
+/* CARD */
+
 .team-item {
-  flex-basis: calc((100% - 72px) / 4);
+  width: 264px;
+
   background-color: #ffffff;
+
   border-radius: 0 0 4px 4px;
+
   box-shadow:
-    0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08);
+    0 2px 1px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
+
   overflow: hidden;
 }
+
+/* IMAGE */
+
 .team-img {
   display: block;
+
   width: 100%;
   height: auto;
 }
+
+/* TEXT CONTENT */
+
 .team-list-text-container {
   padding: 32px 16px;
 }
+
 .team-caption {
   margin-bottom: 8px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
+
   text-align: center;
+
   color: #2e2f42;
 }
+
 .team-text {
   margin-bottom: 8px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
   text-align: center;
+
+  color: #434455;
 }
+
+/* SOCIALS */
+
 .team-socials {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   gap: 24px;
+
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
+
 .team-socials-link {
   width: 40px;
   height: 40px;
+
+  flex-shrink: 0;
 }
+
 .team-socials-item {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   width: 100%;
   height: 100%;
+
   border-radius: 50%;
+
   background-color: #4d5ae5;
+
+  color: #f4f4fd;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .team-socials-item:hover,
 .team-socials-item:focus {
   background-color: #404bbf;
 }
+
 .team-socials-icon {
-  color: #f4f4fd;
+  fill: currentColor;
+}
+
+/* 
+   TABLET — 768px+
+    */
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: stretch;
+
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .team-item {
+    width: 264px;
+  }
+}
+
+/* 
+   DESKTOP — 1158px+
+    */
+
+@media screen and (min-width: 1158px) {
+  .team-list {
+    flex-wrap: nowrap;
+
+    gap: 24px;
+  }
+
+  .team-item {
+    width: calc((100% - 72px) / 4);
+  }
 }

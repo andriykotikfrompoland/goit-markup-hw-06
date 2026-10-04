@@ -1,34 +1,119 @@
 .features {
 }
+
 .features-list {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-.features-item {
-  width: calc((100% - 72px) / 4);
-}
-.features-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
+  flex-direction: column;
 
-  width: 264px;
-  height: 112px;
-  background-color: #f4f4fd;
+  gap: 72px;
 }
-.features-icon {
+
+.features-item {
+  width: 100%;
 }
+
+/* На mobile иконки скрыты */
+
+.features-wrapper {
+  display: none;
+}
+
 .features-name {
   margin-bottom: 8px;
 
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+
+  text-align: center;
+
   color: #2e2f42;
 }
+
 .feature-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: #434455;
+}
+
+/* TABLET - 768px+ */
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  /* Иконки всё ещё скрыты */
+
+  .features-wrapper {
+    display: none;
+  }
+
+  .features-name {
+    font-size: 36px;
+    line-height: 1.11;
+
+    text-align: left;
+  }
+}
+
+/*   DESKTOP - 1158px+ */
+
+@media screen and (min-width: 1158px) {
+  .features-list {
+    flex-wrap: nowrap;
+
+    gap: 24px;
+  }
+
+  .features-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* На desktop показываем иконки */
+
+  .features-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 112px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+
+    background-color: #f4f4fd;
+  }
+
+  .features-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .features-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+
+    text-align: left;
+  }
+
+  .feature-text {
+    font-weight: 400;
+  }
 }
