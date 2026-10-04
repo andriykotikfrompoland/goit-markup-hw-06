@@ -2,30 +2,17 @@
   border-bottom: 1px solid #e7e9fc;
 }
 
-/* 
-   MOBILE
-    */
-
 .header .container {
   display: flex;
   align-items: center;
-  width: 100%;
-}
-
-.header-wrapper {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
 }
 
 /* LOGO */
 
-.header-wrapper .logo {
+.header .logo {
   display: block;
   flex-shrink: 0;
 
-  /* Именно логотип задаёт высоту header на mobile */
   padding: 16px 0;
 }
 
@@ -62,7 +49,9 @@
   stroke: currentColor;
 }
 
-/* NAVIGATION */
+/* 
+   NAVIGATION
+    */
 
 .nav {
   display: none;
@@ -104,7 +93,6 @@
   content: '';
 
   position: absolute;
-
   left: 0;
   bottom: 0;
 
@@ -116,7 +104,9 @@
   background-color: #404bbf;
 }
 
-/* ADDRESS */
+/* 
+   ADDRESS
+    */
 
 .address {
   display: none;
@@ -125,9 +115,12 @@
 .address-list {
   display: flex;
 }
-
 .address-link {
   display: block;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 
   color: #434455;
 
@@ -144,28 +137,24 @@
     */
 
 @media screen and (min-width: 768px) {
-  .header-wrapper {
-    width: auto;
-    flex-shrink: 0;
-  }
+  /* LOGO */
 
-  /* На tablet/mobile padding логотипа больше не нужен */
-  .header-wrapper .logo {
+  .header .logo {
     padding: 0;
   }
 
-  /* Скрываем burger */
+  /* BURGER */
 
   .burger-menu {
     display: none;
   }
 
-  /* Показываем navigation */
+  /* NAVIGATION */
 
   .nav {
     display: block;
 
-    /* По требованию проверки */
+    /* По требованию проверки для tablet */
     margin-left: 120px;
   }
 
@@ -173,10 +162,11 @@
     padding: 24px 0;
   }
 
-  /* Показываем контакты */
+  /* ADDRESS */
 
   .address {
     display: block;
+
     margin-left: auto;
   }
 
@@ -189,10 +179,6 @@
 
   .address-link {
     padding: 0;
-
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
   }
 }
 
@@ -201,11 +187,13 @@
     */
 
 @media screen and (min-width: 1158px) {
-  /* На desktop снова 76px */
+  /* На desktop расстояние logo → nav = 76px */
 
   .nav {
     margin-left: 76px;
   }
+
+  /* CONTACTS */
 
   .address-list {
     flex-direction: row;
