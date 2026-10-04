@@ -153,8 +153,6 @@
 
   .nav {
     display: block;
-
-    /* По требованию проверки для tablet */
     margin-left: 120px;
   }
 
@@ -182,13 +180,9 @@
   }
 }
 
-/* 
-   DESKTOP — 1158px+
-    */
+/* DESKTOP  1158px+ */
 
 @media screen and (min-width: 1158px) {
-  /* На desktop расстояние logo → nav = 76px */
-
   .nav {
     margin-left: 76px;
   }

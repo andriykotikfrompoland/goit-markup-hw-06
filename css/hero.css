@@ -70,9 +70,7 @@
   background-color: #404bbf;
 }
 
-/* 
-   TABLET — 768px+
-    */
+/* TABLET 768px+ */
 
 @media screen and (min-width: 768px) {
   .hero {
@@ -98,9 +96,7 @@
   }
 }
 
-/* 
-   DESKTOP — 1158px+
-    */
+/* DESKTOP  1158px+*/
 
 @media screen and (min-width: 1158px) {
   .hero {

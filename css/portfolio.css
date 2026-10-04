@@ -103,9 +103,7 @@
   color: #434455;
 }
 
-/* 
-   TABLET — 768px+
-    */
+/*  TABLET 768px+*/
 
 @media screen and (min-width: 768px) {
   .portfolio-list {
@@ -121,9 +119,7 @@
   }
 }
 
-/* 
-   DESKTOP — 1158px+
-    */
+/*  DESKTOP 1158px+ */
 
 @media screen and (min-width: 1158px) {
   .portfolio-list {
